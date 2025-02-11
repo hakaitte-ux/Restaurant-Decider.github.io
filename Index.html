@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Decider</title>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            text-align: center;
+            background-color: #000000;
+        }
+
+        .container {
+            margin-top: 60px;
+            background: rgb(255, 255, 255);
+            padding: 25px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #ff0000;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #b30000;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 6px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Decider</h1>
+        <p>Are you in the mood for?</p>
+        <button onclick="showOptions('fineDining')">Fine Dining</button>
+        <button onclick="showOptions('fastFood')">Fast Food</button>
+        <button onclick="pickRandom()">Anything Random</button>
+        
+        <div id="options" class="hidden">
+            <h2>Choose a Restaurant</h2>
+            <ul id="restaurantList"></ul>
+            <button onclick="pickRandomFromList()">Pick One Randomly</button>
+        </div>
+        
+        <div id="result" class="hidden">
+            <h2>Selected Restaurant:</h2>
+            <p id="selectedRestaurant"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
